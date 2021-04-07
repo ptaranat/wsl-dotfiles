@@ -57,7 +57,7 @@ Config for my Pengwin WSL environment. After breaking it for the 4th time I deci
 ## Zsh setup
 
 ### Plugins ###
-`apt install zsh-autosuggestions zsh-syntax-highlighting`
+Using `.zsh_plugins.txt` and Antibody for managing.
 
 ### Plugins Manager ###
 Haven't decided yet. Leaning towards Antibody, Zgen, or Zplugin based on [bechmarks](https://gist.github.com/laggardkernel/4a4c4986ccdcaf47b91e8227f9868ded). Currently testing Antibody (requires uninstalling omz).
