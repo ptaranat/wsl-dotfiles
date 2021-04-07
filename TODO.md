@@ -8,12 +8,25 @@ These are short simple tasks
 - [ ] Check out bat-extras
 - [ ] Install ranger
 - [ ] Check out glow markdown
-
 # BACKLOG
 
 These require more time
 
 - [ ] Setup VSCode
+```
+Extensions:
+Bracket Pair Colorizer 2
+Error Lens
+GitLens
+Python
+Pylance
+C++
+Remote WSL
+
+Community Material Theme
+Material Theme
+Material Icon Theme
+```
 - [ ] Setup mutt for email
 - [ ] Install node and npm
 - [ ] Write a tool that keeps track of useful scripts and shortcuts
