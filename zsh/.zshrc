@@ -102,6 +102,13 @@ else
 	export EDITOR='micro'
 fi
 
+# Keybinds
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# GPG
+export GPG_TTY=$(tty)
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -113,6 +120,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias reload="source ~/.zshrc"
+alias m="micro"
 alias python="python3"
 alias ls="exa"
 alias la="ls -lah"
@@ -124,8 +133,6 @@ alias bat="batcat"
 alias find="fdfind"
 alias rg="rgrep"
 alias plugins="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
