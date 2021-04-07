@@ -1,6 +1,7 @@
 [user]
 	name = Panat Taranat
 	email = panat.taranat@gmail.com
+	signingkey = 94743F22
 [credential]
 	helper = cache
 [color]
@@ -21,3 +22,7 @@
 	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 [gpg]
 	program = gpg
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
