@@ -1,3 +1,5 @@
+# GPG
+export GPG_TTY=$(tty)
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -7,7 +9,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=$HOME/.local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/panat/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zshantibody"
 
@@ -81,12 +83,14 @@ plugins=(
 	git
 	debian
 	python
+	golang
 	colored-man-pages
 	docker
 )
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_plugins.sh
+. /usr/share/autojump/autojump.sh
 
 # User configuration
 
@@ -106,8 +110,11 @@ fi
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# GPG
-export GPG_TTY=$(tty)
+# GO
+export PATH=$PATH:$(go env GOPATH)bin
+
+# EC535
+export EC535="/c/Users/Panat/Documents/GitHub/taec535"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -120,17 +127,17 @@ export GPG_TTY=$(tty)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias reload="source ~/.zshrc"
+alias reload="exec zsh"
 alias m="micro"
 alias python="python3"
 alias ls="exa"
 alias la="ls -lah"
-alias tree="exa --tree"
+#alias tree="exa --tree"
 alias zshconf="micro ~/.zshrc"
 alias ohmyzsh="micro ~/.oh-my-zsh"
 alias weather="curl wttr.in"
 alias bat="batcat"
-alias find="fdfind"
+alias fd="fdfind"
 alias rg="rgrep"
 alias plugins="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
 
