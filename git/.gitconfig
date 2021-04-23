@@ -3,7 +3,7 @@
 	email = panat.taranat@gmail.com
 	signingkey = 94743F22
 [credential]
-	helper = cache
+	helper = /home/panat/.credential-helper
 [color]
 	ui = always
 	branch = always
