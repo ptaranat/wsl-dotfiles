@@ -113,6 +113,9 @@ bindkey '^[[B' history-substring-search-down
 # GO
 export PATH=$PATH:$(go env GOPATH)bin
 
+# Scroll in less
+export LESS='--mouse --wheel-lines=3'
+
 # EC535
 export EC535="/c/Users/Panat/Documents/GitHub/taec535"
 

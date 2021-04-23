@@ -14,6 +14,16 @@
 	pager = true
 	decorate = always
 	showbranch = always
+[core]
+	pager = delta
+[delta]
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
+	syntax-theme = OneHalfDark
+	navigate = true
+	side-by-side = true
+[interactive]
+	diffFilter = delta --color-only
 [pull]
 	ff = only
 [diff]

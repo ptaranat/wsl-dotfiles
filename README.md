@@ -100,3 +100,4 @@ Add `romkatv/powerlevel10k` to my `~/.zsh_plugins.txt`.
 - wttr.in: weather
 - bit: git CLI autosuggestions
 - navi: cheatsheets
+- delta: diff viewer `cargo install git-delta`
