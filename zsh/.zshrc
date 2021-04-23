@@ -116,6 +116,9 @@ export PATH=$PATH:$(go env GOPATH)bin
 # Scroll in less
 export LESS='--mouse --wheel-lines=3'
 
+# Bat theme
+export BAT_THEME=base16
+
 # EC535
 export EC535="/c/Users/Panat/Documents/GitHub/taec535"
 
