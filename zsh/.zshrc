@@ -86,11 +86,11 @@ plugins=(
 	golang
 	colored-man-pages
 	docker
+	autojump
 )
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_plugins.sh
-. /usr/share/autojump/autojump.sh
 
 # User configuration
 
@@ -128,10 +128,9 @@ export EC535="/c/Users/Panat/Documents/GitHub/taec535"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias reload="exec zsh"
-alias m="micro"
+alias e=$EDITOR
 alias python="python3"
 alias ls="exa"
-alias la="ls -lah"
 #alias tree="exa --tree"
 alias zshconf="micro ~/.zshrc"
 alias ohmyzsh="micro ~/.oh-my-zsh"
