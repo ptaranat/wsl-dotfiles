@@ -93,9 +93,10 @@ Add `romkatv/powerlevel10k` to my `~/.zsh_plugins.txt`.
 
 ### Other cool TUIs
 - ticker: stock watcher
-- gotop: activity monitor
+- bottom: activity monitor
 - glow markdown
 - mutt: email client
 - weechat: IRC
 - wttr.in: weather
 - bit: git CLI autosuggestions
+- navi: cheatsheets
