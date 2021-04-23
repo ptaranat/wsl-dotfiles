@@ -6,3 +6,7 @@ zsh-users/zsh-completions
 djui/alias-tips
 
 romkatv/powerlevel10k
+
+TamCore/autoupdate-oh-my-zsh-plugins
+
+# marlonrichert/zsh-autocomplete
