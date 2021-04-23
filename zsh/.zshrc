@@ -122,6 +122,9 @@ export BAT_THEME=base16
 # EC535
 export EC535="/c/Users/Panat/Documents/GitHub/taec535"
 
+# Navi Widget (Ctrl+G)
+eval "$(navi widget zsh)"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
