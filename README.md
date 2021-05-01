@@ -25,11 +25,12 @@ Config for my Pengwin WSL environment. After breaking it for the 4th time I deci
 
 ### Shortcuts
 
-- New vertical pane: alt shift =
-- New pane: alt shift d
-- Switch pane: alt arrow
-- Resize pane: alt shift arrow
-- Close pane: alt shift w
+- New vertical pane: Alt Shift =
+- New horizontal pane: Alt Shift -
+- New pane: Alt Shift D
+- Switch pane: Alt Arrow
+- Resize pane: Alt Shift Arrow
+- Close pane: Ctrl Shift W
 
 ## pengwin-setup
 
