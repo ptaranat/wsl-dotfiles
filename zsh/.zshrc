@@ -138,6 +138,7 @@ eval "$(navi widget zsh)"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias reload="exec zsh"
 alias e=$EDITOR
+alias c="clear"
 alias python="python3"
 alias ls="exa"
 #alias tree="exa --tree"
@@ -148,6 +149,14 @@ alias bat="batcat"
 alias fd="fdfind"
 alias rg="rgrep"
 alias plugins="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
+alias disk='echo "╓───── m o u n t . p o i n t s"; \
+			 echo "╙────────────────────────────────────── ─ ─ "; \
+			 lsblk -a; echo ""; \
+			 echo "╓───── d i s k . u s a g e";\
+			 echo "╙────────────────────────────────────── ─ ─ "; \
+			 df -h;'
+alias fixdos="find . -type f -print0 | xargs -0 dos2unix"
+alias memo="bat -p ~/memo.md"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
