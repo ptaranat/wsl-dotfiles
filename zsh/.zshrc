@@ -1,17 +1,48 @@
-# GPG
-export GPG_TTY=$(tty)
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "$HOME/.cache/p10k-instant-prompt-panat.zsh" ]]; then
+	source "$HOME/.cache/p10k-instant-prompt-panat.zsh"
 fi
+
+source ~/.zsh_plugins/zsh-snap/znap.zsh
+# GPG
+export GPG_TTY=$(tty)
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
-# Path to your oh-my-zsh installation.
-export ZSH="/home/panat/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zshantibody"
+
+znap clone \
+	git@github.com:zsh-users/zsh-autosuggestions.git \
+	git@github.com:zsh-users/zsh-completions.git \
+	git@github.com:zsh-users/zsh-syntax-highlighting.git \
+	git@github.com:zsh-users/zsh-history-substring-search.git \
+	git@github.com:ohmyzsh/ohmyzsh.git \
+	git@github.com:romkatv/powerlevel10k.git \
+	git@github.com:djui/alias-tips
+
+znap prompt powerlevel10k
+
+# From OMZ
+znap source ohmyzsh
+znap source ohmyzsh \
+	plugins/{git,debian,autojump,colored-man-pagesgpg-agent} \
+	plugins/{python,pip} \
+	plugins/{node,npm,yarn} \
+	plugins/golang \
+	plugins/{rust,cargo} \
+	plugins/{aws,docker,terraform}
+
+znap source alias-tips
+
+# Zsh-users
+znap source zsh-completions
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+znap source zsh-syntax-highlighting
+znap source zsh-history-substring-search
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+znap source zsh-autosuggestions
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -79,18 +110,9 @@ export ZSH="/home/panat/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLA
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	debian
-	python
-	golang
-	colored-man-pages
-	docker
-	autojump
-)
+plugins=()
 
-source $ZSH/oh-my-zsh.sh
-source ~/.zsh_plugins.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -148,13 +170,12 @@ alias weather="curl wttr.in"
 alias bat="batcat"
 alias fd="fdfind"
 alias rg="rgrep"
-alias plugins="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"
-alias disk='echo "╓───── m o u n t . p o i n t s"; \
-			 echo "╙────────────────────────────────────── ─ ─ "; \
-			 lsblk -a; echo ""; \
-			 echo "╓───── d i s k . u s a g e";\
-			 echo "╙────────────────────────────────────── ─ ─ "; \
-			 df -h;'
+alias disks='echo "╓───── m o u n t . p o i n t s"; \
+			echo "╙────────────────────────────────────── ─ ─ "; \
+			lsblk -a; echo ""; \
+			echo "╓───── d i s k . u s a g e";\
+			echo "╙────────────────────────────────────── ─ ─ "; \
+			df -h;'
 alias fixdos="find . -type f -print0 | xargs -0 dos2unix"
 alias memo="bat -p ~/memo.md"
 
