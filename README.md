@@ -39,12 +39,10 @@ Config for my Pengwin WSL environment. After breaking it for the 4th time I deci
 - Editors
   - Neovim
 - GUI
-
   - GUI Lib
   - High DPI
   - Synaptic package manager
   - X410
-
 - Programming
   - C++
   - Go
@@ -62,25 +60,16 @@ Config for my Pengwin WSL environment. After breaking it for the 4th time I deci
 
 ### Plugins
 
-Using `.zsh_plugins.txt` and Antibody for managing.
+Using `.zsh_plugins.txt` and ~~Antibody for managing.~~  
+Antibody was deprecated so now I am using znap, which is pure zsh script. All the configuration is in the `.zshrc`, including the list of plugins and their
 
 ### Plugins Manager
 
-Haven't decided yet. Leaning towards Antibody, Zgen, or Zplugin based on [bechmarks](https://gist.github.com/laggardkernel/4a4c4986ccdcaf47b91e8227f9868ded). Currently testing Antibody (requires uninstalling omz).
-
-I install antibody first and use static loading:
-
-```bash
-curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-antibody update
-```
-
-Then I install OMZ. Source omz has to be before source antibody plugins.
+Znap is currently working the best. It is simply a way to manage cloning and sourcing plugin repositories. My `.zshrc` is just a bunch of clone and source statements. Plus it works well with OMZ. Care should be taken in the order of zsh-user plugins (competions, syntax-highlighting, history-substring-search, autosuggestions).
 
 ### Theme
 
-Add `romkatv/powerlevel10k` to my `~/.zsh_plugins.txt`.
+`znap clone git@github.com:romkatv/powerlevel10k.git` then `znap prompt powerlevel10k`. P10k's instant prompt is slightly faster so I am keeping that at the top.
 
 ## Tools
 
