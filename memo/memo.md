@@ -1,4 +1,4 @@
-Stop using cd!
+Stop using cd! Use j
 
 # Commands to learn
 - j for autojump
@@ -14,9 +14,10 @@ Stop using cd!
 - Switch: Alt Arrow
 - Resize: Alt Shift Arrow
 - Navi: Ctrl G
+- wslview: Open in explorer
 
 # Aliases I should use more
 - weather
-- disk
+- disks
 - md is mkdir -p
 
