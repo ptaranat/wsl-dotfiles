@@ -7,6 +7,11 @@ Stop using cd! Use j
 - bit for git
 - btm resource monitor
 
+# Vscode
+- Split: Ctrl \
+- Cycle: Ctrl Tab
+- Focus #: Ctrl num
+
 # Terminal Shortcuts
 - Vertical: Alt Shift =
 - Horizontal: Alt Shift -
@@ -20,4 +25,7 @@ Stop using cd! Use j
 - weather
 - disks
 - md is mkdir -p
+
+# Misc
+- Create GitHub repo: repo.new
 
