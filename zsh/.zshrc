@@ -26,7 +26,7 @@ znap source ohmyzsh \
 	plugins/{aws,docker,terraform}
 
 znap source djui/alias-tips
-znap source marlonrichert/zsh-autocomplete
+# znap source marlonrichert/zsh-autocomplete
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
 
