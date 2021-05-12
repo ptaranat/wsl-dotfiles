@@ -23,6 +23,10 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
+    # Enable bootstrap functions
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+    
 
 # Enable autocomplete layer
 [[layers]]
@@ -34,3 +38,24 @@ auto_completion_tab_key_behavior = "smart"
 name = 'shell'
 default_position = 'top'
 default_height = 30
+
+[[layers]]
+name = "lang#c"
+format_onsave = true
+
+[[layers]]
+name = "lang#go"
+
+[[layers]]
+name = "lang#javascript"
+format_onsave = true
+
+[[layers]]
+name = "lang#markdown"
+enabled_formater = ["remark", "prettier"]
+enableWcWidth = true
+
+[[layers]]
+name = "lang#python"
+format_on_save = true
+enabled_linters = ["python", "pylint"]
