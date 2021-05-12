@@ -2,9 +2,6 @@
 " must be first, because it changes other options as a side effect
 set nocompatible
 
-" paste without auto indentation
-set paste
-
 " maintain undo history between sessions
 set undofile
 set undodir=~/.vim/undo
