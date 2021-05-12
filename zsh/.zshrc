@@ -13,19 +13,10 @@ source ~/.zsh_plugins/zsh-snap/znap.zsh
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
-znap clone \
-	git@github.com:zsh-users/zsh-autosuggestions.git \
-	git@github.com:zsh-users/zsh-completions.git \
-	git@github.com:zsh-users/zsh-syntax-highlighting.git \
-	git@github.com:zsh-users/zsh-history-substring-search.git \
-	git@github.com:ohmyzsh/ohmyzsh.git \
-	git@github.com:romkatv/powerlevel10k.git \
-	git@github.com:djui/alias-tips
-
-znap prompt powerlevel10k
+znap prompt romkatv/powerlevel10k
 
 # From OMZ
-znap source ohmyzsh
+znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh \
 	plugins/{git,debian,autojump,colored-man-pagesgpg-agent} \
 	plugins/{python,pip} \
@@ -34,15 +25,17 @@ znap source ohmyzsh \
 	plugins/{rust,cargo} \
 	plugins/{aws,docker,terraform}
 
-znap source alias-tips
+znap source djui/alias-tips
+znap source marlonrichert/zsh-autocomplete
+znap source marlonrichert/zsh-hist
+znap source zdharma/fast-syntax-highlighting
 
 # Zsh-users
-znap source zsh-completions
+znap source zsh-users/zsh-completions
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-znap source zsh-syntax-highlighting
-znap source zsh-history-substring-search
+znap source zsh-users/zsh-history-substring-search
 ZSH_AUTOSUGGEST_STRATEGY=(history)
-znap source zsh-autosuggestions
+znap source zsh-users/zsh-autosuggestions
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -163,9 +156,7 @@ alias e=$EDITOR
 alias c="clear"
 alias python="python3"
 alias ls="exa"
-#alias tree="exa --tree"
 alias zshconf="micro ~/.zshrc"
-alias ohmyzsh="micro ~/.oh-my-zsh"
 alias weather="curl wttr.in"
 alias bat="batcat"
 alias fd="fdfind"
