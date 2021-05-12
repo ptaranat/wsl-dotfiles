@@ -1,5 +1,6 @@
 function! myspacevim#before() abort
     inoremap kj <Esc>
+    let g:material_theme_style = "darker"
 endfunction
 
 function! myspacevim#after() abort

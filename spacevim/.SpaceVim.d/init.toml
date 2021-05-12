@@ -11,7 +11,7 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "gruvbox"
+    colorscheme = "material"
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
@@ -39,16 +39,26 @@ name = 'shell'
 default_position = 'top'
 default_height = 30
 
+[[custom_plugins]]
+repo = "kaicataldo/material.vim"
+merged = 0
+
+[[layers]]
+name = "git"
+
+[[layers]]
+name = "colorscheme"
+
 [[layers]]
 name = "lang#c"
-format_onsave = true
+format_on_save = true
 
 [[layers]]
 name = "lang#go"
 
 [[layers]]
 name = "lang#javascript"
-format_onsave = true
+format_on_save = true
 
 [[layers]]
 name = "lang#markdown"
@@ -59,3 +69,6 @@ enableWcWidth = true
 name = "lang#python"
 format_on_save = true
 enabled_linters = ["python", "pylint"]
+
+[[layers]]
+name = "lang#sh"
