@@ -1,6 +1,7 @@
 Stop using cd! Use j
 
 # Commands to learn
+
 - j for autojump
 - fd instead of find
 - rg for searching in files
@@ -8,11 +9,13 @@ Stop using cd! Use j
 - btm resource monitor
 
 # Vscode
+
 - Split: Ctrl \
 - Cycle: Ctrl Tab
 - Focus #: Ctrl num
 
 # Terminal Shortcuts
+
 - Vertical: Alt Shift =
 - Horizontal: Alt Shift -
 - Close pane: Ctrl Shift W
@@ -22,10 +25,11 @@ Stop using cd! Use j
 - wslview: Open in explorer
 
 # Aliases I should use more
+
 - weather
 - disks
 - md is mkdir -p
 
 # Misc
-- Create GitHub repo: repo.new
 
+- Create GitHub repo: repo.new

@@ -1,38 +1,38 @@
 [user]
-	name = Panat Taranat
-	email = panat.taranat@gmail.com
-	signingkey = 94743F22
+name = Panat Taranat
+email = panat.taranat@gmail.com
+signingkey = 94743F22
 [credential]
-	helper = /home/panat/.credential-helper
+helper = /home/panat/.credential-helper
 [color]
-	ui = always
-	branch = always
-	diff = always
-	interactive = always
-	status = always
-	grep = always
-	pager = true
-	decorate = always
-	showbranch = always
+ui = always
+branch = always
+diff = always
+interactive = always
+status = always
+grep = always
+pager = true
+decorate = always
+showbranch = always
 [core]
-	pager = delta
+pager = delta
 [delta]
-	plus-style = "syntax #012800"
-	minus-style = "syntax #340001"
-	syntax-theme = OneHalfDark
-	navigate = true
-	side-by-side = true
+plus-style = "syntax #012800"
+minus-style = "syntax #340001"
+syntax-theme = OneHalfDark
+navigate = true
+side-by-side = true
 [interactive]
-	diffFilter = delta --color-only
+diffFilter = delta --color-only
 [pull]
-	ff = only
+ff = only
 [diff]
-	tool = vimdiff
+tool = vimdiff
 [difftool "vimdiff"]
-	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 [gpg]
-	program = gpg
+program = gpg
 [commit]
-	gpgsign = true
+gpgsign = true
 [tag]
-	gpgsign = true
+gpgsign = true
