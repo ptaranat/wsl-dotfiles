@@ -61,11 +61,6 @@ name = "lang#javascript"
 format_on_save = true
 
 [[layers]]
-name = "lang#markdown"
-enabled_formater = ["remark", "prettier"]
-enableWcWidth = true
-
-[[layers]]
 name = "lang#python"
 format_on_save = true
 enabled_linters = ["python", "pylint"]
