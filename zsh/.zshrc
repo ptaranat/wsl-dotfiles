@@ -39,6 +39,8 @@ plugins=()
 
 # User configuration
 export ZSH_CUSTOM="$HOME/.zsh"
+# Source custom zsh files
+for config ($HOME/.zsh/*.zsh) source $config
 
 # Navi Widget (Ctrl+G)
 eval "$(navi widget zsh)" 
