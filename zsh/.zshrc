@@ -134,9 +134,6 @@ export LESS='--mouse --wheel-lines=3'
 # Bat theme
 export BAT_THEME=base16
 
-# EC535
-export EC535="/c/Users/Panat/Documents/GitHub/taec535"
-
 # Navi Widget (Ctrl+G)
 eval "$(navi widget zsh)"
 
@@ -156,7 +153,7 @@ alias e=$EDITOR
 alias c="clear"
 alias python="python3"
 alias ls="exa"
-alias zshconf="micro ~/.zshrc"
+alias zshconf="e ~/.zshrc"
 alias weather="curl wttr.in"
 alias bat="batcat"
 alias fd="fdfind"
@@ -169,6 +166,8 @@ alias disks='echo "╓───── m o u n t . p o i n t s"; \
 			df -h;'
 alias fixdos="find . -type f -print0 | xargs -0 dos2unix"
 alias memo="bat -p ~/memo.md"
+alias lyn="learnyounode"
+alias ljs="javascripting" 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
