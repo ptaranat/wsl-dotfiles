@@ -41,7 +41,7 @@ default_height = 30
 
 [[custom_plugins]]
 repo = "kaicataldo/material.vim"
-merged = 0
+merged = false
 
 [[layers]]
 name = "git"
