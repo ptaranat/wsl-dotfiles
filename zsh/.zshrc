@@ -17,6 +17,7 @@ znap source ohmyzsh \
 	plugins/{git,debian,autojump,colored-man-pagesgpg-agent} \
 	plugins/{python,pip} \
 	plugins/{node,npm,yarn} \
+	plugins/{ruby,bundler} \
 	plugins/golang \
 	plugins/{rust,cargo} \
 	plugins/{aws,docker,terraform}
