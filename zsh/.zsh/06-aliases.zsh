@@ -5,7 +5,7 @@ alias c="clear"
 alias python="python3"
 alias ls="exa"
 alias zshconf="e ~/.zshrc"
-alias zshalias="e ~/.zsh/aliases.zsh"
+alias zshalias="e ~/.zsh/06-aliases.zsh"
 alias weather="curl wttr.in"
 alias bat="batcat"
 alias fd="fdfind"
@@ -16,7 +16,10 @@ alias disks='echo "╓───── m o u n t . p o i n t s"; \
 			echo "╓───── d i s k . u s a g e";\
 			echo "╙────────────────────────────────────── ─ ─ "; \
 			df -h;'
+# Recursively convert line endings to Unix
 alias fixdos="find . -type f -print0 | xargs -0 dos2unix"
 alias memo="bat -p ~/memo.md"
 alias lyn="learnyounode"
 alias ljs="javascripting"
+# Git
+alias ghc="gh repo clone"

@@ -21,7 +21,7 @@ Config for my Pengwin WSL environment. After breaking it for the 4th time I deci
   "source": "Windows.Terminal.Wsl",
   "fontFace": "MesloLGS NF",
   "colorScheme": "MaterialDarker",
-  "commandline": "wsl.exe ~"
+  "startingDirectory": "\\\\wsl$\\WLinux\\home\\panat"
 }
 ```
 
