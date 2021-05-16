@@ -25,15 +25,6 @@ Config for my Pengwin WSL environment. After breaking it for the 4th time I deci
 }
 ```
 
-### Shortcuts
-
-- New vertical pane: Alt Shift =
-- New horizontal pane: Alt Shift -
-- New pane: Alt Shift D
-- Switch pane: Alt Arrow
-- Resize pane: Alt Shift Arrow
-- Close pane: Ctrl Shift W
-
 ## pengwin-setup
 
 - Editors
@@ -58,22 +49,24 @@ Config for my Pengwin WSL environment. After breaking it for the 4th time I deci
 
 ## Zsh setup
 
+[https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+
 ### Plugins
 
-Using `.zsh_plugins.txt` and ~~Antibody for managing.~~  
-Antibody was deprecated so now I am using znap, which is pure zsh script. All the configuration is in the `.zshrc`, including the list of plugins and their
+Using `.zsh_plugins.txt` and ~~Antibody for managing~~ [Znap plugin manager](https://github.com/marlonrichert/zsh-snap).
+Antibody was deprecated so now I am using Znap, which is pure zsh script. All the configuration is in the [.zshrc](/zsh/.zshrc) file.
 
 ### Plugins Manager
 
-Znap is currently working the best. It is simply a way to manage cloning and sourcing plugin repositories. My `.zshrc` is just a bunch of clone and source statements. Plus it works well with OMZ. Care should be taken in the order of zsh-user plugins (competions, syntax-highlighting, history-substring-search, autosuggestions).
+Znap is currently working the best. It is simply a way to manage cloning and sourcing plugin repositories. My `.zshrc` is just a bunch of source statements. Plus it works well with OMZ. Care should be taken in the order of zsh-user plugins (competions, syntax-highlighting, history-substring-search, autosuggestions).
 
 ### Theme
 
-`znap clone git@github.com:romkatv/powerlevel10k.git` then `znap prompt powerlevel10k`. P10k's instant prompt is slightly faster so I am keeping that at the top.
+Use `znap prompt powerlevel10k`. P10k's instant prompt is slightly faster so I am keeping that at the top.
 
 ## Tools
 
-### Frequently Used
+Most of them end up as [aliases](/zsh/.zsh/06-aliases.zsh).
 
 - micro editor
   - `apt install micro`
