@@ -7,7 +7,6 @@ alias ls="exa"
 alias la="ls -lah"
 alias zshconf="e ~/.zshrc"
 alias zshalias="e ~/.zsh/06-aliases.zsh"
-alias what="alias | grep"
 alias weather="curl wttr.in"
 alias bat="batcat"
 alias fd="fdfind"
@@ -25,3 +24,13 @@ alias lyn="learnyounode"
 alias ljs="javascripting"
 # Git
 alias ghc="gh repo clone"
+
+# Search for aliases
+function what() {
+	if [ "$1" != "" ]
+	then
+		alias | grep --color=always "$1" | bat
+	else
+		alias | bat
+	fi
+}
