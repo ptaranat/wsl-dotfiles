@@ -46,6 +46,13 @@ for config ($HOME/.zsh/*.zsh) source $config
 # Navi Widget (Ctrl+G)
 eval "$(navi widget zsh)" 
 
+# GitHub CLI completions
+if [[ ! -d "$ZSH/completions" || ! -f "$ZSH/completions/_gh" ]]; then
+    mkdir -pv $ZSH/completions
+    gh completion --shell zsh > $ZSH/completions/_gh
+    echo "gh added completions: gh completion --shell zsh > $ZSH/completions/_gh"
+fi
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 autoload -U +X bashcompinit && bashcompinit
