@@ -18,7 +18,7 @@ alias zshalias="$EDITOR ~/.zsh/06-aliases.zsh"
 alias memo="bat -p ~/memo.md"
 # Overrides
 alias python="python3"
-alias bat="batcat"
+# alias bat="batcat"
 alias fd="fdfind"
 alias rg="rgrep"
 # Toys
@@ -45,8 +45,13 @@ alias -s md=micro
 function what() {
 	if [ "$1" != "" ]
 	then
-		alias | grep --color=always "$1" | batcat
+		alias | grep --color=always "$1" | bat
 	else
-		alias | batcat
+		alias | bat
 	fi
+}
+
+# View git diff in bat
+function batdiff() {
+	git diff --name-only --diff-filter=d | xargs bat --diff
 }
