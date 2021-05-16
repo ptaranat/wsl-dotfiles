@@ -39,7 +39,7 @@ alias ghc="gh repo clone"
 # Update cargo packages (need cargo-update)
 alias cargoupdate="cargo install-update -a"
 # Filetype
-alias -s md=micro
+alias -s md="glow -p"
 
 # Search for aliases
 function what() {
