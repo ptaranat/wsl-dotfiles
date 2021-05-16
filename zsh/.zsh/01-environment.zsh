@@ -2,6 +2,7 @@
 path=("/home/linuxbrew/.linuxbrew/bin" $path)
 path=($(go env GOPATH)bin $path)
 path=($HOME/.local/bin $path)
+path=($HOME/bin $path)
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
