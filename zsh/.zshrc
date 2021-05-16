@@ -7,6 +7,13 @@ if [[ -r "$HOME/.cache/p10k-instant-prompt-panat.zsh" ]]; then
 	source "$HOME/.cache/p10k-instant-prompt-panat.zsh"
 fi
 
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 source ~/.zsh_plugins/zsh-snap/znap.zsh
 
 znap prompt romkatv/powerlevel10k
