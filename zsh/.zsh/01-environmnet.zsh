@@ -1,5 +1,7 @@
 # Paths
-export PATH=$HOME/.local/bin:$PATH
+path=("/home/linuxbrew/.linuxbrew/bin" $path)
+path=($(go env GOPATH)bin $path)
+path=($HOME/.local/bin $path)
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -8,11 +10,8 @@ else
 	export EDITOR='micro'
 fi
 
-# GO
-export PATH=$PATH:$(go env GOPATH)bin
-
 # Scroll in less
-export LESS='--mouse --wheel-lines=3'
+export LESS='--mouse --wheel-lines=3 -r'
 
 # Bat theme
 export BAT_THEME=base16
