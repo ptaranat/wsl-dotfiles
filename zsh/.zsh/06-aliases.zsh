@@ -19,9 +19,11 @@ alias dots="cd ~/.dotfiles"
 # Reminder
 alias memo="bat -p ~/memo.md"
 # Overrides
-alias python="python3"
-# alias bat="batcat"
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -I"
 alias fd="fdfind"
+alias python="python3"
 alias rg="rgrep"
 # Toys
 alias weather="curl wttr.in"
