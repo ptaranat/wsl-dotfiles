@@ -86,7 +86,7 @@ Most of them end up as [aliases](/zsh/.zsh/06-aliases.zsh).
 
 - ticker: stock watcher
 - bottom: activity monitor
-- glow markdown
+- glow: markdown renderer
 - mutt: email client
 - weechat: IRC
 - wttr.in: weather
