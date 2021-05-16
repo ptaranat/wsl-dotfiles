@@ -14,6 +14,8 @@ alias lmr="exa -ls modified --group-directories-first --git"
 # Edit configs
 alias zshconf="$EDITOR ~/.zshrc"
 alias zshalias="$EDITOR ~/.zsh/06-aliases.zsh"
+alias zshenv="$EDITOR ~/.zsh/01-environment.zsh"
+alias dots="cd ~/.dotfiles"
 # Reminder
 alias memo="bat -p ~/memo.md"
 # Overrides
@@ -54,4 +56,13 @@ function what() {
 # View git diff in bat
 function batdiff() {
 	git diff --name-only --diff-filter=d | xargs bat --diff
+}
+
+function mcd() {
+	if [ "$1" != "" ]
+	then
+		mkdir -p $1 ; cd $1
+	else
+		echo "Missing folder name"
+	fi
 }
