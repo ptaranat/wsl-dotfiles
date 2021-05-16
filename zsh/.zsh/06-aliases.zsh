@@ -4,6 +4,7 @@ alias e=$EDITOR
 alias c="clear"
 alias python="python3"
 alias ls="exa"
+alias la="ls -lah"
 alias zshconf="e ~/.zshrc"
 alias zshalias="e ~/.zsh/06-aliases.zsh"
 alias what="alias | grep"
