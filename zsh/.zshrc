@@ -13,8 +13,8 @@ znap prompt romkatv/powerlevel10k
 
 # Plugins
 znap source ohmyzsh/ohmyzsh
-znap source ohmyzsh \
-	plugins/{git,debian,autojump,colored-man-pagesgpg-agent} \
+znap source ohmyzsh/ohmyzsh \
+	plugins/{git,debian,autojump,colored-man-pages,gpg-agent} \
 	plugins/{python,pip} \
 	plugins/{node,npm,yarn} \
 	plugins/{ruby,bundler} \
@@ -44,7 +44,7 @@ export ZSH_CUSTOM="$HOME/.zsh"
 for config ($HOME/.zsh/*.zsh) source $config
 
 # Navi Widget (Ctrl+G)
-eval "$(navi widget zsh)" 
+eval "$(navi widget zsh)"
 
 # GitHub CLI completions
 if [[ ! -d "$ZSH/completions" || ! -f "$ZSH/completions/_gh" ]]; then
