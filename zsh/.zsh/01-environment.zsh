@@ -19,3 +19,6 @@ export BAT_THEME=base16
 
 # Language
 export LANG=en_US.UTF-8
+
+# Kubernetes
+export KUBECONFIG=$HOME/.kube/config
