@@ -44,6 +44,9 @@ filetype plugin indent on
 " stop unnecessary rendering
 set lazyredraw
 
+" time Vim waits after you stop typing before trigger plugin
+set updatetime=100
+
 " no line wrapping
 set nowrap
 
