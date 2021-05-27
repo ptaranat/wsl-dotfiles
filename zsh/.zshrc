@@ -16,7 +16,7 @@ fi
 
 source ~/.zsh_plugins/zsh-snap/znap.zsh
 
-znap prompt romkatv/powerlevel10k
+znap source romkatv/powerlevel10k
 
 # Plugins
 znap source ohmyzsh/ohmyzsh
