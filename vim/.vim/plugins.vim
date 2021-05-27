@@ -25,7 +25,11 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'ajh17/VimCompletesMe'
-Plug 'codota/tabnine-vim'
+Plug 'codota/tabnine-vim', {'on': []}
+augroup loadYcm
+  au!
+  autocmd InsertEnter * call plug#load('tabnine-vim') | au! loadYcm
+augroup end
 Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
@@ -33,6 +37,7 @@ Plug 'tpope/vim-fugitive'
 
 " stylize
 Plug 'itchyny/lightline.vim'
+Plug 'mhinz/vim-startify'
 
 
 call plug#end()
