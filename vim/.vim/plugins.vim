@@ -17,21 +17,7 @@ Plug 'yunlingz/equinusocio-material.vim'
 Plug 'luochen1990/rainbow'
 
 " programming
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', has('nvim') ? {} : { 'do': [ ':UpdateRemotePlugins', ':set runtimepath+=~/.vim/plugged/deoplete.nvim/' ]}
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-"Plug 'ajh17/VimCompletesMe'
-"Plug 'codota/tabnine-vim', {'on': []}
-"augroup loadYcm
-"  au!
-"  autocmd InsertEnter * call plug#load('tabnine-vim') | au! loadYcm
-"augroup end
-"Plug 'w0rp/ale'
-"Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'psf/black'
@@ -41,7 +27,14 @@ if has ('nvim')
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-compe'
+  Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
 endif
+" snippets
+Plug 'rafamadriz/friendly-snippets'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'Raimondi/delimitMate'
 
 " stylize
 Plug 'itchyny/lightline.vim'

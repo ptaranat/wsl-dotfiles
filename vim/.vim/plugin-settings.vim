@@ -1,3 +1,16 @@
+" banner
+let s:startify_ascii_header = [
+\ '███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗',
+\ '████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║',
+\ '██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║',
+\ '██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║',
+\ '██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║',
+\ '╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝',
+\ ''
+\]
+let g:startify_custom_header = map(s:startify_ascii_header +
+        \ startify#fortune#quote(), '"   ".v:val')
+
 " colors
 let g:equinusocio_material_style = 'darker'
 let g:equinusocio_material_hide_vertsplit = 1
@@ -15,15 +28,109 @@ augroup omnifuncs
 augroup end
 
 " completions
+set completeopt=menuone,noselect
 let b:vcm_tab_complete = 'omni'
 set omnifunc=syntaxcomplete#Complete
-" accept completion with enter
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
+" treesitter
 if has('nvim')
-    let g:deoplete#enable_at_startup = 1
-    " cycle completions with tab
-    inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = {
+        "bash", 
+        "c",
+        "cpp",
+        "css",
+        "dockerfile",
+        "go",
+        "gomod",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "python",
+        "rust",
+        "ruby",
+        "toml",
+        "yaml",
+    },
+    highlight = {
+        enable = true,
+    },
+    indent = {
+        enable = true,
+    },
+    incremental_selection = {
+        enable = true,
+    },
+}
+EOF
+endif
+
+" nvim-compe
+if has('nvim')
+  let g:compe = {}
+  let g:compe.enabled = v:true
+  let g:compe.source = {
+    \ 'buffer': v:true,
+    \ 'path': v:true,
+    \ 'tags': v:true,
+    \ 'spell': v:true,
+    \ 'calc': v:true,
+    \ 'nvim_lsp': v:true,
+    \ 'nvim_treesitter': v:true,
+    \ 'vsnip': v:true,
+    \ 'tabnine': v:true,
+    \ }
+  inoremap <silent><expr> <C-Space> compe#complete()
+  inoremap <silent><expr> <CR>      compe#confirm({ 'keys': "\<Plug>delimitMateCR", 'mode': '' })
+  inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+  inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+  inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+lua <<EOF
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+  local col = vim.fn.col('.') - 1
+  if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+    return true
+  else
+    return false
+  end
+end
+
+-- Use (s-)tab to:
+--- move to prev/next item in completion menuone
+--- jump to prev/next snippet's placeholder
+_G.tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-n>"
+  elseif vim.fn.call("vsnip#available", {1}) == 1 then
+    return t "<Plug>(vsnip-expand-or-jump)"
+  elseif check_back_space() then
+    return t "<Tab>"
+  else
+    return vim.fn['compe#complete']()
+  end
+end
+_G.s_tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-p>"
+  elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
+    return t "<Plug>(vsnip-jump-prev)"
+  else
+    return t "<S-Tab>"
+  end
+end
+
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+EOF
 endif
 
 " signify diff
@@ -31,29 +138,19 @@ let g:signify_realtime = 1
 let g:signify_skip = {'vcs': { 'allow': ['git'] }}
 
 " linting
-let g:ale_completion_enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = ' '
 let g:ale_sign_warning = ' '
-let g:ale_fixers = {'python': ['black']}
+let g:ale_fixers = {
+  \ 'python': ['black'],
+  \ 'go': ['gofmt'],
+  \ }
 let g:ale_fix_on_save = 1
 
 " limit modelines
 set nomodeline
 let g:secure_modelines_verbose = 0
 let g:secure_modelines_modelines = 15
-
-let s:startify_ascii_header = [
-\ '    _   ____________ _    ________  ___',
-\ '   / | / / ____/ __ \ |  / /  _/  |/  /',
-\ '  /  |/ / __/ / / / / | / // // /|_/ /',
-\ ' / /|  / /___/ /_/ /| |/ // // /  / /',
-\ '/_/ |_/_____/\____/ |___/___/_/  /_/',
-\ ''
-\]
-let g:startify_custom_header = map(s:startify_ascii_header, '"   ".v:val')
-"let g:startify_custom_header = map(s:startify_ascii_header +
-"        \ startify#fortune#quote(), '"   ".v:val')
 
 " lightline http://git.io/lightline
 let g:lightline = {
