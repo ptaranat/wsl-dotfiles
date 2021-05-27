@@ -91,8 +91,10 @@ endif
 "nnoremap <silent> <leader>y V:w !xsel -i -b<CR>
 "nnoremap <silent> <leader>p :silent :r !xsel -o -b<CR>
 
-" Quicksave
-noremap <Leader>s :update<CR>
+" quicksave
+noremap <silent> <C-s> :update<CR>
+vnoremap <silent> <C-s> <C-c>:update<CR>
+inoremap <silent> <C-s> <C-o>:update<CR>
 
 " remap code completion to ^space
 "inoremap <Nul> <C-x><C-o>
@@ -104,8 +106,6 @@ inoremap <C-@> <C-Space>
 " always display status line
 set laststatus=2
 
-" Esc in insert mode
+" Map kj to esc
 inoremap kj <Esc>
-
-" Esc in command mode
 cnoremap kj <Esc>
