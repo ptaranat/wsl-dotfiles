@@ -11,7 +11,7 @@ set undodir=~/.vim/undo
 set noswapfile
 
 " show line numbers
-set number
+set number relativenumber
 " ruler
 set ruler
 " file name tab completion
