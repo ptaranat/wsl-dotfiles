@@ -41,6 +41,18 @@ set nomodeline
 let g:secure_modelines_verbose = 0
 let g:secure_modelines_modelines = 15
 
+let s:startify_ascii_header = [
+\ '    _   ____________ _    ________  ___',
+\ '   / | / / ____/ __ \ |  / /  _/  |/  /',
+\ '  /  |/ / __/ / / / / | / // // /|_/ /',
+\ ' / /|  / /___/ /_/ /| |/ // // /  / /',
+\ '/_/ |_/_____/\____/ |___/___/_/  /_/',
+\ ''
+\]
+let g:startify_custom_header = map(s:startify_ascii_header, '"   ".v:val')
+"let g:startify_custom_header = map(s:startify_ascii_header +
+"        \ startify#fortune#quote(), '"   ".v:val')
+
 " lightline http://git.io/lightline
 let g:lightline = {
   \ 'colorscheme': 'equinusocio_material',
