@@ -42,6 +42,8 @@ alias ljs="javascripting"
 alias ghc="gh repo clone"
 # Update cargo packages (need cargo-update)
 alias cargoupdate="cargo install-update -a"
+# Write a blog post
+alias write="$HOME/projects/website/write_post.sh"
 # Filetype
 alias -s md="glow -p"
 
