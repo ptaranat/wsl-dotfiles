@@ -15,6 +15,15 @@ call plug#begin('~/.vim/plugged')
 " colors
 Plug 'chuling/equinusocio-material.vim'
 
+" programming
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', has('nvim') ? {} : { 'do': [ ':UpdateRemotePlugins', ':set runtimepath+=~/.vim/plugged/deoplete.nvim/' ]}
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 " stylize
 Plug 'itchyny/lightline.vim'
 
