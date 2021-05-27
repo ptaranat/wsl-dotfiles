@@ -30,6 +30,11 @@ endif
 let g:signify_realtime = 1
 let g:signify_skip = {'vcs': { 'allow': ['git'] }}
 
+" limit modelines
+set nomodeline
+let g:secure_modelines_verbose = 0
+let g:secure_modelines_modelines = 15
+
 " lightline http://git.io/lightline
 let g:lightline = {
   \ 'colorscheme': 'equinusocio_material',

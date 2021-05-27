@@ -2,9 +2,6 @@
 " must be first, because it changes other options as a side effect
 set nocompatible
 
-" security
-set modelines=0
-
 " maintain undo history between sessions
 set undofile
 set undodir=~/.vim/undo
