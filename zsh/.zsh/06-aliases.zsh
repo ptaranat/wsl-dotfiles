@@ -16,6 +16,8 @@ alias zshconf="$EDITOR ~/.zshrc"
 alias zshalias="$EDITOR ~/.zsh/06-aliases.zsh"
 alias zshenv="$EDITOR ~/.zsh/01-environment.zsh"
 alias dots="cd ~/.dotfiles"
+alias vimrc="$EDITOR ~/.vim/general.vim"
+alias vimplug="$EDITOR ~/.vim/plugins.vim"
 # Reminder
 alias memo="bat -p ~/memo.md"
 # Overrides
