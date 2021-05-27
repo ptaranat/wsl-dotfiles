@@ -16,10 +16,11 @@ Stop using cd! Use j
 
 # Terminal Shortcuts
 
+- Auto pane: Alt Shift D
 - Vertical: Alt Shift =
 - Horizontal: Alt Shift -
 - Close pane: Ctrl Shift W
-- Switch: Alt Arrow
+- Switch: Alt HJKL
 - Resize: Alt Shift Arrow
 - Navi: Ctrl G
 - wslview: Open in explorer
