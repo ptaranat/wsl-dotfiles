@@ -13,7 +13,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " colors
-Plug 'chuling/equinusocio-material.vim'
+Plug 'yunlingz/equinusocio-material.vim'
+Plug 'luochen1990/rainbow'
 
 " programming
 if has('nvim')
@@ -23,11 +24,12 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-if has('nvim') || has('patch-8.0.902')
-  Plug 'mhinz/vim-signify'
-else
-  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
-endif
+Plug 'ajh17/VimCompletesMe'
+Plug 'codota/tabnine-vim'
+Plug 'w0rp/ale'
+Plug 'sheerun/vim-polyglot'
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
 
 " stylize
 Plug 'itchyny/lightline.vim'
