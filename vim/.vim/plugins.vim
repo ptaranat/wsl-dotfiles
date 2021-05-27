@@ -35,6 +35,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'psf/black'
+if has ('nvim')
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+endif
 
 " stylize
 Plug 'itchyny/lightline.vim'
