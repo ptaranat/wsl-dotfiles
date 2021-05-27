@@ -34,6 +34,7 @@ Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
+Plug 'psf/black'
 
 " stylize
 Plug 'itchyny/lightline.vim'
