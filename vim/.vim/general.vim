@@ -31,6 +31,10 @@ set gdefault " the /g flag on :s substitutions by default
 
 set backspace=indent,eol,start " make backspace behave in a sane manner
 
+set title " let Vim set term title
+
+set mouse=a " enable mouse
+
 " disable startup message
 set shortmess+=I
 
