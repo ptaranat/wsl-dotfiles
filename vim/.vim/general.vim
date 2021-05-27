@@ -69,6 +69,9 @@ set softtabstop=4
 " remove trailing whitespaces and ^M chars
 autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
+" make git commit open in insert mode
+autocmd FileType gitcommit exec 'au VimEnter * startinsert'
+
 " make ; works like : for commands. lazy shifting
 "nnoremap ; :
 
