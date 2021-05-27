@@ -4,6 +4,7 @@ alias e=$EDITOR
 alias c="clear"
 alias h="history -10"
 alias hg="history | grep"
+alias ZZ="exit"
 # Replace ls with exa
 alias ls="exa"
 alias l="exa --group-directories-first"
@@ -73,3 +74,10 @@ function mcd() {
 		echo "Missing folder name"
 	fi
 }
+
+# ascii
+alias toiletlist='for i in ${TOILET_FONT_PATH:=/usr/share/figlet}/*.{t,f}lf; do j=${i##*/}; echo ""; echo "╓───── "$j; echo "╙────────────────────────────────────── ─ ─ "; echo ""; toilet -d "${i%/*}" -f "$j" "${j%.*}"; done'
+alias ascii="toilet -t -f 3d"
+alias future="toilet -t -f future"
+alias rusto="toilet -t -f rusto"
+alias rustofat="toilet -t -f rustofat"
