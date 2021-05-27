@@ -5,6 +5,7 @@ alias c="clear"
 alias h="history -10"
 alias hg="history | grep"
 alias ZZ="exit"
+alias neovide="/c/Users/Panat/bin/neovide.exe --wsl --geometry=200x60"
 # Replace ls with exa
 alias ls="exa"
 alias l="exa --group-directories-first"
@@ -20,6 +21,7 @@ alias dots="cd ~/.dotfiles"
 alias vimrc="$EDITOR ~/.vim/general.vim"
 alias vimplug="$EDITOR ~/.vim/plugins.vim"
 alias vimplugs="$EDITOR ~/.vim/plugin-settings.vim"
+alias vimui="$EDITOR ~/.vim/ui.vim"
 # Reminder
 alias memo="bat -p ~/memo.md"
 # Overrides
