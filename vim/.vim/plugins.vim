@@ -24,14 +24,14 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-Plug 'ajh17/VimCompletesMe'
-Plug 'codota/tabnine-vim', {'on': []}
-augroup loadYcm
-  au!
-  autocmd InsertEnter * call plug#load('tabnine-vim') | au! loadYcm
-augroup end
-Plug 'w0rp/ale'
-Plug 'sheerun/vim-polyglot'
+"Plug 'ajh17/VimCompletesMe'
+"Plug 'codota/tabnine-vim', {'on': []}
+"augroup loadYcm
+"  au!
+"  autocmd InsertEnter * call plug#load('tabnine-vim') | au! loadYcm
+"augroup end
+"Plug 'w0rp/ale'
+"Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'psf/black'
@@ -39,6 +39,8 @@ if has ('nvim')
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'neovim/nvim-lspconfig'
 endif
 
 " stylize
