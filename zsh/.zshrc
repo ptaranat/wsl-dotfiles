@@ -27,7 +27,7 @@ znap source ohmyzsh/ohmyzsh \
 	plugins/{ruby,bundler} \
 	plugins/golang \
 	plugins/{rust,cargo} \
-	plugins/{aws,docker,terraform}
+	plugins/{ansible,aws,docker,helm,kubectl,terraform}
 
 znap source djui/alias-tips
 # znap source marlonrichert/zsh-autocomplete
