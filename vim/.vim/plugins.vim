@@ -29,6 +29,9 @@ if has ('nvim')
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
   Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
+  Plug 'glepnir/dashboard-nvim'
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'romgrk/barbar.nvim'
 endif
 " snippets
 Plug 'rafamadriz/friendly-snippets'
@@ -38,7 +41,6 @@ Plug 'Raimondi/delimitMate'
 
 " stylize
 Plug 'itchyny/lightline.vim'
-Plug 'mhinz/vim-startify'
 
 
 call plug#end()
