@@ -13,3 +13,5 @@
 - (num) g t/T: Go to tab
 - C-w c: Close window
 
+# Select Mode
+- gh: Enter select mode
