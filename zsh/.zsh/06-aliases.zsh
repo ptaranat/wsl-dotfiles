@@ -23,8 +23,8 @@ alias vimplug="$EDITOR ~/.vim/plugins.vim"
 alias vimplugs="$EDITOR ~/.vim/plugin-settings.vim"
 alias vimui="$EDITOR ~/.vim/ui.vim"
 # Reminder
-alias memo="bat -p ~/memo.md"
-alias memov="bat -p ~/memov.md"
+alias memo="bat -p ~/.memo.md"
+alias memov="bat -p ~/.memov.md"
 # Overrides
 alias cp="cp -i"
 alias mv="mv -i"
