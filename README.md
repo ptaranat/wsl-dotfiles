@@ -1,6 +1,9 @@
-# pengwin-dotfiles
+# WSL Dotfiles
 
-Config for my Pengwin WSL environment. After breaking it for the 4th time I decided I should document it, maybe automate it later.
+Customizing my work environment brings me the same kind of joy like installing Skyrim mods.
+I could spend days downloading stuff, making sure everything works together, but I still haven't beaten the main quest.
+These are dotfiles for a mostly terminal-based environment, TUIs and CLIs over GUIs.
+One day I will automate the setup using Nix.
 
 ## Prereqs on Windows Host
 
@@ -13,16 +16,21 @@ Config for my Pengwin WSL environment. After breaking it for the 4th time I deci
 
 ## Windows Terminal
 
+Currently using Preview for Quake mode.
 ```json
 {
-  "guid": "{7f586916-8357-53d4-bb2b-ca96f639898a}",
-  "hidden": false,
-  "name": "Pengwin",
-  "source": "Windows.Terminal.Wsl",
-  "fontFace": "MesloLGS NF",
-  "colorScheme": "MaterialDarker",
-  "startingDirectory": "\\\\wsl$\\WLinux\\home\\panat"
-}
+    "antialiasingMode": "grayscale",
+    "backgroundImage": null,
+    "bellStyle": "visual",
+    "colorScheme": "MaterialDarker",
+    "cursorShape": "vintage",
+    "fontFace": "MesloLGS NF",
+    "guid": "{7f586916-8357-53d4-bb2b-ca96f639898a}",
+    "hidden": false,
+    "name": "Pengwin",
+    "source": "Windows.Terminal.Wsl",
+    "startingDirectory": "\\\\wsl$\\WLinux\\home\\panat"
+},
 ```
 
 ## pengwin-setup
@@ -53,16 +61,19 @@ Config for my Pengwin WSL environment. After breaking it for the 4th time I deci
 
 ### Plugins
 
-Using `.zsh_plugins.txt` and ~~Antibody for managing~~ [Znap plugin manager](https://github.com/marlonrichert/zsh-snap).
-Antibody was deprecated so now I am using Znap, which is pure zsh script. All the configuration is in the [.zshrc](/zsh/.zshrc) file.
+Using `.zsh_plugins.txt` and [Znap plugin manager](https://github.com/marlonrichert/zsh-snap).
+All the configuration is in the [.zshrc](/zsh/.zshrc) file.
 
 ### Plugins Manager
 
-Znap is currently working the best. It is simply a way to manage cloning and sourcing plugin repositories. My `.zshrc` is just a bunch of source statements. Plus it works well with OMZ. Care should be taken in the order of zsh-user plugins (competions, syntax-highlighting, history-substring-search, autosuggestions).
+Znap manages cloning and sourcing plugin repositories.
+My `.zshrc` is just a bunch of source statements.
+Plus it works well with OMZ.
+Care should be taken in the order of zsh-user plugins (competions, syntax-highlighting, history-substring-search, autosuggestions).
 
 ### Theme
 
-Use `znap prompt powerlevel10k`. P10k's instant prompt is slightly faster so I am keeping that at the top.
+Use `znap source powerlevel10k`. P10k's instant prompt is slightly faster so I am keeping that at the top.
 
 ## Tools
 
