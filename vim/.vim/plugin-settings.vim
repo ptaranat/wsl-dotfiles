@@ -57,6 +57,7 @@ require'nvim-treesitter.configs'.setup {
     },
     indent = {
         enable = true,
+        disable = {"python"}
     },
     incremental_selection = {
         enable = true,
@@ -145,6 +146,9 @@ nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
 " signify diff
 let g:signify_realtime = 1
 let g:signify_skip = {'vcs': { 'allow': ['git'] }}
+
+" indent lines
+let g:indentLine_char = '┆'
 
 " linting
 let g:ale_sign_column_always = 1

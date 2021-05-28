@@ -41,6 +41,8 @@ Plug 'Raimondi/delimitMate'
 
 " stylize
 Plug 'itchyny/lightline.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 
 call plug#end()
