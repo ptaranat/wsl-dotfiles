@@ -22,10 +22,14 @@ set encoding=utf-8
 set fileformats=unix,dos
 
 " searching
-set hlsearch " highlight search
+set nohlsearch " highlight search
 set incsearch " incremental search
 set ignorecase " case insensitive search
 set smartcase " ignore case if no capitals
+
+set hidden " keep buffers alive
+
+set scrolloff=8 " scroll before end
 
 set gdefault " the /g flag on :s substitutions by default
 
@@ -109,3 +113,7 @@ set laststatus=2
 " Map kj to esc
 inoremap kj <Esc>
 cnoremap kj <Esc>
+
+" Move lines in V-line mode
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
