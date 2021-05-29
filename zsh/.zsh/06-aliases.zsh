@@ -14,7 +14,7 @@ alias la="exa -la --group-directories-first --git"
 alias lm="exa -ls modified --group-directories-first --reverse --git"
 alias lmr="exa -ls modified --group-directories-first --git"
 # Edit configs
-alias zshconf="$EDITOR ~/.zshrc"
+alias zshrc="$EDITOR ~/.zshrc"
 alias zshalias="$EDITOR ~/.zsh/06-aliases.zsh"
 alias zshenv="$EDITOR ~/.zsh/01-environment.zsh"
 alias dots="cd ~/.dotfiles"

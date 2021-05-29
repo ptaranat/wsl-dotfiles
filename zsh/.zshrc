@@ -22,9 +22,10 @@ znap source romkatv/powerlevel10k
 znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
 	plugins/{git,debian,autojump,colored-man-pages,gpg-agent} \
+    plugins/{fd,fzf,gh} \
 	plugins/{python,pip} \
 	plugins/{node,npm,yarn} \
-	plugins/{ruby,bundler} \
+	plugins/{ruby,bundler,gem} \
 	plugins/golang \
 	plugins/{rust,cargo} \
 	plugins/{ansible,aws,docker,helm,kubectl,terraform}
@@ -33,6 +34,7 @@ znap source djui/alias-tips
 # znap source marlonrichert/zsh-autocomplete
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
+znap source changyuheng/zsh-interactive-cd
 
 # Zsh-users
 znap source zsh-users/zsh-completions
