@@ -74,6 +74,10 @@ set tabstop=4
 " let backspace delete indent
 set softtabstop=4
 
+" show trailing spaces
+set list
+set listchars=eol:↴,tab:→\ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
+
 " remove trailing whitespaces and ^M chars
 autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
