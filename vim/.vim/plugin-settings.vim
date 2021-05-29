@@ -148,7 +148,9 @@ let g:signify_realtime = 1
 let g:signify_skip = {'vcs': { 'allow': ['git'] }}
 
 " indent lines
-let g:indentLine_char = '┆'
+"let g:indentLine_char = '┆'
+let g:indent_blankline_use_treesitter = 1
+let g:indentLine_fileTypeExclude = ['dashboard']
 
 " linting
 let g:ale_sign_column_always = 1
