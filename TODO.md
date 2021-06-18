@@ -24,6 +24,12 @@ Python
 Pylance
 C++
 Remote WSL
+shell-format
+ShellCheck
+TabOut
+Git Graph
+Git History
+Code Spell Checker
 
 Community Material Theme
 Material Theme
