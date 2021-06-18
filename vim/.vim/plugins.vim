@@ -21,6 +21,7 @@ Plug 'w0rp/ale'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'psf/black'
+Plug 'tpope/vim-sleuth'
 if has ('nvim')
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
