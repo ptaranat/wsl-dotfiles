@@ -21,20 +21,20 @@ znap source romkatv/powerlevel10k
 # Plugins
 znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
-	plugins/{git,debian,autojump,colored-man-pages,gpg-agent} \
-    plugins/{fd,fzf,gh} \
+	plugins/{git,debian,colored-man-pages,gpg-agent} \
+	plugins/{fzf,gh,vi-mode} \
 	plugins/{python,pip} \
 	plugins/{node,npm,yarn} \
-	plugins/{ruby,bundler,gem} \
+	plugins/{ruby,gem} \
 	plugins/golang \
-	plugins/{rust,cargo} \
-	plugins/{ansible,aws,docker,helm,kubectl,terraform}
+	plugins/{ansible,aws,helm,kubectl,terraform}
 
 znap source djui/alias-tips
 # znap source marlonrichert/zsh-autocomplete
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
 znap source changyuheng/zsh-interactive-cd
+znap source ptaranat/omz-autojump
 
 # Zsh-users
 znap source zsh-users/zsh-completions
@@ -61,6 +61,8 @@ if [[ ! -d "$ZSH/completions" || ! -f "$ZSH/completions/_gh" ]]; then
     gh completion --shell zsh > $ZSH/completions/_gh
     echo "gh added completions: gh completion --shell zsh > $ZSH/completions/_gh"
 fi
+
+# [[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
