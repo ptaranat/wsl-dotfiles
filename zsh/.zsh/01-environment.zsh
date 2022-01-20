@@ -1,6 +1,6 @@
 # Paths
 path=("/home/linuxbrew/.linuxbrew/bin" $path)
-path=($(go env GOPATH)bin $path)
+path=("/usr/local/go/bin" $path)
 path=($HOME/.local/bin $path)
 path=($HOME/bin $path)
 
