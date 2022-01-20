@@ -33,6 +33,7 @@ if has ('nvim')
   Plug 'glepnir/dashboard-nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'romgrk/barbar.nvim'
+  Plug 'b3nj5m1n/kommentary'
 endif
 " snippets
 Plug 'rafamadriz/friendly-snippets'
@@ -42,7 +43,6 @@ Plug 'Raimondi/delimitMate'
 
 " stylize
 Plug 'itchyny/lightline.vim'
-Plug 'Yggdroot/indentLine'
 Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'lua' }
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
