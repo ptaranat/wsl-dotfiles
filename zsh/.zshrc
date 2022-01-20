@@ -22,19 +22,21 @@ znap source romkatv/powerlevel10k
 znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
 	plugins/{git,debian,colored-man-pages,gpg-agent} \
-	plugins/{fzf,gh,vi-mode} \
 	plugins/{python,pip} \
+	plugins/golang \
 	plugins/{node,npm,yarn} \
 	plugins/{ruby,gem} \
-	plugins/golang \
-	plugins/{ansible,aws,helm,kubectl,terraform}
+	plugins/{ansible,aws,terraform}
+
+fpath+=( ~[ohmyzsh]/{docker,fd,gh,helm,ripgrep,kubectl,minikube})
 
 znap source djui/alias-tips
-# znap source marlonrichert/zsh-autocomplete
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
-znap source changyuheng/zsh-interactive-cd
 znap source ptaranat/omz-autojump
+znap source jeffreytse/zsh-vi-mode
+zvm_after_init_commands+=('znap source changyuheng/zsh-interactive-cd')
+zvm_after_init_commands+=('znap source unixorn/fzf-zsh-plugin')
 
 # Zsh-users
 znap source zsh-users/zsh-completions
@@ -54,13 +56,6 @@ for config ($HOME/.zsh/*.zsh) source $config
 
 # Navi Widget (Ctrl+G)
 eval "$(navi widget zsh)"
-
-# GitHub CLI completions
-if [[ ! -d "$ZSH/completions" || ! -f "$ZSH/completions/_gh" ]]; then
-    mkdir -pv $ZSH/completions
-    gh completion --shell zsh > $ZSH/completions/_gh
-    echo "gh added completions: gh completion --shell zsh > $ZSH/completions/_gh"
-fi
 
 # [[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
 
