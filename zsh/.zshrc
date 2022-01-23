@@ -28,7 +28,8 @@ znap source ohmyzsh/ohmyzsh \
 	plugins/{ruby,gem} \
 	plugins/{ansible,aws,terraform}
 
-fpath+=( ~[ohmyzsh]/{docker,fd,gh,helm,ripgrep,kubectl,minikube})
+# fpath+=( ~[ohmyzsh]/{fd,gh,helm,ripgrep})
+# znap fpath _minikube 'minikube completion zsh'
 
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
@@ -47,7 +48,7 @@ bindkey '^[[B' history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 znap source zsh-users/zsh-autosuggestions
 
-plugins=()
+plugins=(minikube)
 
 # User configuration
 export ZSH_CUSTOM="$HOME/.zsh"
