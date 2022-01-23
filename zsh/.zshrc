@@ -19,6 +19,7 @@ source ~/.zsh_plugins/zsh-snap/znap.zsh
 znap source romkatv/powerlevel10k
 
 # Plugins
+znap install ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
 	plugins/{git,debian,colored-man-pages,gpg-agent} \
@@ -26,6 +27,7 @@ znap source ohmyzsh/ohmyzsh \
 	plugins/golang \
 	plugins/{node,npm,yarn} \
 	plugins/{ruby,gem} \
+	plugins/{kubectl,minikube} \
 	plugins/{ansible,aws,terraform}
 
 # fpath+=( ~[ohmyzsh]/{fd,gh,helm,ripgrep})
@@ -48,7 +50,7 @@ bindkey '^[[B' history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 znap source zsh-users/zsh-autosuggestions
 
-plugins=(minikube)
+plugins=()
 
 # User configuration
 export ZSH_CUSTOM="$HOME/.zsh"
