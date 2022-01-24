@@ -19,9 +19,13 @@ source ~/.zsh_plugins/zsh-snap/znap.zsh
 znap source romkatv/powerlevel10k
 
 # Plugins
-znap install ohmyzsh/ohmyzsh
+# znap install ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
+	lib/{cli,clipboard,compfix,completion,correction} \
+	lib/{diagnostics,directories,functions,git,grep} \
+	lib/{history,key-bindings,misc} \
+	lib/{spectrum,termsupport,theme-and-appearance} \
 	plugins/{git,debian,colored-man-pages,gpg-agent} \
 	plugins/{python,pip} \
 	plugins/golang \
@@ -37,7 +41,9 @@ znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
 znap source ptaranat/omz-autojump
+# Vi Mode
 znap source jeffreytse/zsh-vi-mode
+export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
 zvm_after_init_commands+=('znap source changyuheng/zsh-interactive-cd')
 zvm_after_init_commands+=('znap source unixorn/fzf-zsh-plugin')
 
