@@ -46,7 +46,7 @@ znap source jeffreytse/zsh-vi-mode
 export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
 zvm_after_init_commands+=('znap source changyuheng/zsh-interactive-cd')
 zvm_after_init_commands+=('znap source unixorn/fzf-zsh-plugin')
-
+zvm_after_init_commands+=('eval "$(navi widget zsh)"')
 # Zsh-users
 znap source zsh-users/zsh-completions
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
@@ -63,8 +63,6 @@ export ZSH_CUSTOM="$HOME/.zsh"
 # Source custom zsh files
 for config ($HOME/.zsh/*.zsh) source $config
 
-# Navi Widget (Ctrl+G)
-eval "$(navi widget zsh)"
 
 # [[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
 

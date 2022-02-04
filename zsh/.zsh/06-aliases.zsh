@@ -32,6 +32,14 @@ alias rm="rm -I"
 alias fd="fdfind"
 alias python="python3"
 alias rg="rgrep"
+# Git Worktree
+alias gwa="git worktree add"
+alias gwl="git worktree list"
+alias gwk="git worktree lock"
+alias gwm="git worktree move"
+alias gwp="git worktree prune"
+alias gwr="git worktree remove"
+alias gwu="git worktree unlock"
 # Toys
 alias weather="curl wttr.in"
 alias disks='echo "╓───── m o u n t . p o i n t s"; \

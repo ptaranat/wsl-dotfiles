@@ -11,6 +11,9 @@ else
 	export EDITOR='nvim'
 fi
 
+# SSH Agent
+eval $(keychain --eval id_rsa -q --noask)
+
 # Scroll in less
 export LESS='--mouse --wheel-lines=3 -r'
 
