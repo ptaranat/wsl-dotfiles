@@ -32,6 +32,7 @@ alias rm="rm -I"
 alias fd="fdfind"
 alias python="python3"
 alias rg="rgrep"
+alias docker="podman"
 # Git Worktree
 alias gwa="git worktree add"
 alias gwl="git worktree list"
