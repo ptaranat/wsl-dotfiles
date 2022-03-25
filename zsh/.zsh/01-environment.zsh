@@ -36,3 +36,6 @@ export LANG=en_US.UTF-8
 
 # Kubernetes
 export KUBECONFIG=$HOME/.kube/config
+
+# FZF
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs --glob "!{node_modules/*,.git/*}"'
