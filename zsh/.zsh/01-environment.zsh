@@ -23,7 +23,7 @@ else
 fi
 
 # SSH Agent
-eval $(keychain --eval id_rsa -q --noask)
+znap eval ssh-agent 'keychain --eval id_rsa -q --noask'
 
 # Scroll in less
 export LESS='--mouse --wheel-lines=3 -r'
@@ -39,3 +39,16 @@ export KUBECONFIG=$HOME/.kube/config
 
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs --glob "!{node_modules/*,.git/*}"'
+
+# export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+export BROWSER=host_chrome
+
+# function fix_wsl2_interop() {
+#     for i in $(pstree -np -s $$ | grep -o -E '[0-9]+'); do
+#         if [[ -e "/run/WSL/${i}_interop" ]]; then
+#             export WSL_INTEROP=/run/WSL/${i}_interop
+#         fi
+#     done
+# }
+
+# fix_wsl2_interop

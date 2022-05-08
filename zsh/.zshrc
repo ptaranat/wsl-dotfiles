@@ -26,7 +26,7 @@ znap source ohmyzsh/ohmyzsh \
 	plugins/{git,debian,colored-man-pages,gpg-agent} \
 	plugins/{python,pip} \
 	plugins/golang \
-	plugins/{node,npm,yarn} \
+	plugins/{node,npm,nvm,yarn} \
 	plugins/{ruby,gem} \
 	plugins/{kubectl,minikube} \
 	plugins/{ansible,aws,terraform}
@@ -38,7 +38,7 @@ znap source aloxaf/fzf-tab
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
 znap source zdharma/fast-syntax-highlighting
-znap source ptaranat/omz-autojump
+znap eval zoxide 'zoxide init zsh --cmd j'
 # Vi Mode
 znap source jeffreytse/zsh-vi-mode
 export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
@@ -80,5 +80,5 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
 
 export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
