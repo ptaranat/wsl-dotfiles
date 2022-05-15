@@ -56,13 +56,14 @@ require'nvim-treesitter.configs'.setup {
         enable = true,
     },
     indent = {
-        enable = true,
-        disable = {"python"}
+        enable = false,
     },
     incremental_selection = {
         enable = true,
     },
 }
+require('rust-tools').setup({})
+require('lspconfig').rust_analyzer.setup({})
 EOF
 endif
 
@@ -79,7 +80,6 @@ if has('nvim')
     \ 'nvim_lsp': v:true,
     \ 'nvim_treesitter': v:true,
     \ 'vsnip': v:true,
-    \ 'tabnine': v:true,
     \ }
   inoremap <silent><expr> <C-Space> compe#complete()
   inoremap <silent><expr> <CR>      compe#confirm({ 'keys': "\<Plug>delimitMateCR", 'mode': '' })

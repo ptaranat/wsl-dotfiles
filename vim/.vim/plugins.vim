@@ -30,11 +30,12 @@ if has ('nvim')
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
-  Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
   Plug 'glepnir/dashboard-nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'romgrk/barbar.nvim'
   Plug 'b3nj5m1n/kommentary'
+  Plug 'rust-lang/rust.vim'
+  Plug 'simrat39/rust-tools.nvim'
 endif
 " snippets
 Plug 'rafamadriz/friendly-snippets'
@@ -44,7 +45,7 @@ Plug 'Raimondi/delimitMate'
 
 " stylize
 Plug 'itchyny/lightline.vim'
-Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'lua' }
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'edkolev/tmuxline.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
