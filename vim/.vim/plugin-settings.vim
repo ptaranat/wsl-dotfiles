@@ -64,6 +64,7 @@ require'nvim-treesitter.configs'.setup {
 }
 require('rust-tools').setup({})
 require('lspconfig').rust_analyzer.setup({})
+require('leap').add_default_mappings({})
 EOF
 endif
 

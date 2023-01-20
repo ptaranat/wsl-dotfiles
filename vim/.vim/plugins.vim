@@ -36,6 +36,7 @@ if has ('nvim')
   Plug 'b3nj5m1n/kommentary'
   Plug 'rust-lang/rust.vim'
   Plug 'simrat39/rust-tools.nvim'
+  Plug 'ggandor/leap.nvim'
 endif
 " snippets
 Plug 'rafamadriz/friendly-snippets'
