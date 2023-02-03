@@ -66,13 +66,11 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 plugins=()
 
-# User configuration
-export ZSH_CUSTOM="$HOME/.zsh"
 # Source custom zsh files
 for config ($HOME/.zsh/*.zsh) source $config
 
 
-# [[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
+[[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -82,3 +80,5 @@ complete -o nospace -C /usr/local/bin/bit bit
 export NVM_DIR="$HOME/.config/nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
