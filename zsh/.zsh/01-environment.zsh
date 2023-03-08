@@ -12,8 +12,22 @@ fi
 # Paths
 path=("/home/linuxbrew/.linuxbrew/bin" $path)
 path=("/usr/local/go/bin" $path)
+path=("/mnt/c/Users/Panat/AppData/Local/Programs/Microsoft VS Code/bin" $path)
+path=("$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin" $path)
 path=($HOME/.local/bin $path)
 path=($HOME/bin $path)
+
+# Start Docker daemon automatically
+if [ -z "ps aux | grep dockerd | grep -v grep" ]; then
+  sudo dockerd > /dev/null 2>&1 &
+  disown
+fi
+
+# Go
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+path=($GOPATH/bin $path)
+path=($GOROOT/bin $path)
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -23,7 +37,7 @@ else
 fi
 
 # SSH Agent
-znap eval ssh-agent 'keychain --eval id_rsa -q --noask'
+# znap eval ssh-agent 'keychain --eval id_rsa -q --noask' > /dev/null 2>&1
 
 # Scroll in less
 export LESS='--mouse --wheel-lines=3 -r'
@@ -40,8 +54,8 @@ export KUBECONFIG=$HOME/.kube/config
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs --glob "!{node_modules/*,.git/*}"'
 
-# export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
-export BROWSER=host_chrome
+export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+# export BROWSER=host_chrome
 
 # function fix_wsl2_interop() {
 #     for i in $(pstree -np -s $$ | grep -o -E '[0-9]+'); do

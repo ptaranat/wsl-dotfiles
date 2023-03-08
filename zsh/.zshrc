@@ -16,7 +16,7 @@ source ~/.zsh_plugins/zsh-snap/znap.zsh
 znap source romkatv/powerlevel10k
 
 # Plugins
-# znap install ohmyzsh/ohmyzsh
+znap install ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh
 znap source ohmyzsh/ohmyzsh \
 	lib/{cli,clipboard,compfix,completion,correction} \
@@ -37,13 +37,13 @@ znap source ohmyzsh/ohmyzsh \
 znap source aloxaf/fzf-tab
 znap source djui/alias-tips
 znap source marlonrichert/zsh-hist
-znap source zdharma/fast-syntax-highlighting
+znap source z-shell/F-Sy-H
 znap eval zoxide 'zoxide init zsh --cmd j'
 # Vi Mode
 znap source jeffreytse/zsh-vi-mode
 export ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
 zvm_after_init_commands+=('znap source unixorn/fzf-zsh-plugin')
-zvm_after_init_commands+=('eval "$(navi widget zsh)"')
+# zvm_after_init_commands+=('eval "$(navi widget zsh)"')
 # Zsh-users
 znap source zsh-users/zsh-completions
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
@@ -80,5 +80,3 @@ complete -o nospace -C /usr/local/bin/bit bit
 export NVM_DIR="$HOME/.config/nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
