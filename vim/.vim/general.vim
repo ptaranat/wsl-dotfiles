@@ -67,17 +67,17 @@ set foldminlines=99
 " wrap long lines
 set nowrap 
 
-" use indents of 4 spaces
-set shiftwidth=4
+" use indents of 2 spaces
+set shiftwidth=2
 
 " tabs are spaces, not tabs
 set expandtab
 
 " an indentation every four columns
-set tabstop=4
+set tabstop=2
 
 " let backspace delete indent
-set softtabstop=4
+set softtabstop=2
 
 " show trailing spaces
 set list
