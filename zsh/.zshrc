@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/panat/completions:"* ]]; then export FPATH="/home/panat/completions:$FPATH"; fi
 # GPG
 export GPG_TTY=$(tty)
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -11,7 +13,11 @@ if type brew &>/dev/null; then
   fpath+=$(brew --prefix)/share/zsh/site-functions
 fi
 
-source ~/.zsh_plugins/zsh-snap/znap.zsh
+[[ -r ~/Repos/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/.zsh_plugins/znap
+
+source ~/.zsh_plugins/znap/znap.zsh
 
 znap source romkatv/powerlevel10k
 
@@ -77,6 +83,16 @@ for config ($HOME/.zsh/*.zsh) source $config
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
 
-export NVM_DIR="$HOME/.config/nvm"
+# export NVM_DIR="$HOME/.config/nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+alias fuz='/home/panat/.fuz/fuz --path "/home/panat/projects/rpg/srd"'
+alias fz='fuz --sorttime'
+alias fze='fuz --edit'
+. "/home/panat/.deno/env"
+if [[ "$TERM_PROGRAM" == "vscode" || "$TERM_PROGRAM" == "cursor" ]]; then
+  return
+fi

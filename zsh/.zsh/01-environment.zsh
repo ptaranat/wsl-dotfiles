@@ -9,6 +9,10 @@ if [[ -z "$XDG_RUNTIME_DIR" ]]; then
   fi
 fi
 
+# X410
+export DISPLAY=$(ip route | grep default | awk '{print $3; exit;}'):0.0
+export LIBGL_ALWAYS_INDIRECT=1
+
 # Paths
 path=("/home/linuxbrew/.linuxbrew/bin" $path)
 path=("/usr/local/go/bin" $path)
